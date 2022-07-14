@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Employee.EmployeeController">
+   <children>
+      <TabPane prefHeight="527.0" prefWidth="855.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Employee">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="547.0" prefWidth="844.0">
+                     <children>
+                        <HBox layoutX="208.0" prefHeight="495.0" prefWidth="690.0">
+                           <children>
+                              <TableView fx:id="employeetable" onMouseClicked="#loaddatatofields" prefHeight="495.0" prefWidth="647.0" style="-fx-background-color: #2D3447;">
+                                 <columns>
+                                    <TableColumn fx:id="empIDcolumn" prefWidth="55.0" text="ID" />
+                                    <TableColumn fx:id="empFNamecolumn" prefWidth="75.0" text="FName" />
+                                    <TableColumn fx:id="empLNamecolumn" prefWidth="83.0" text="LName" />
+                                    <TableColumn fx:id="empPasswordcolumn" prefWidth="84.0" text="EmpPassword" />
+                                    <TableColumn fx:id="empDOBcolumn" prefWidth="68.0" text="EmpDOB" />
+                                    <TableColumn fx:id="EmpSalaryculomn" prefWidth="81.0" text="EmpSalary" />
+                                    <TableColumn fx:id="EmpPhoneNocolumn" prefWidth="74.0" text="EmpPhoneNo" />
+                                    <TableColumn fx:id="EmpSexcolumn" prefWidth="51.0" text="EmpSex" />
+                                    <TableColumn fx:id="EmpPositioncolumn" prefWidth="75.0" text="EmpPosition" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="-1.0" layoutY="-4.0" prefHeight="464.0" prefWidth="206.0" style="-fx-background-color: #2D3447;">
+                           <children>
+                              <Label contentDisplay="BOTTOM" nodeOrientation="RIGHT_TO_LEFT" prefHeight="33.0" prefWidth="169.0" text=" Employee Main Form" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="empID" disable="true" editable="false" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="empFName" promptText="FName">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="empLName" promptText="LName">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                                 <TextField fx:id="empPassword" promptText="EmployeePassword">
+                                    <VBox.margin>
+                                       <Insets left="15.0" right="15.0" />
+                                    </VBox.margin>
+                                 </TextField>
+                              <DatePicker fx:id="empDOB" prefHeight="25.0" prefWidth="192.0" promptText="EmployeeDOB">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+
+                              <TextField fx:id="empSalary" promptText="EmployeeSalary">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="empPhoneNo" promptText="EmployeePhoneNo">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <ComboBox fx:id="empSexType" prefWidth="150.0" promptText="Select Gender">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="empType" prefWidth="150.0" promptText="Type">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button mnemonicParsing="false" onAction="#addEmployee" prefHeight="25.0" prefWidth="146.0" text="Add Employee">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#UpdateEmployee" prefHeight="25.0" prefWidth="146.0" text="Update Employee">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#DeleteEmployee" prefHeight="25.0" prefWidth="146.0" text="Delete Employee">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#clearFields" prefHeight="25.0" prefWidth="146.0" text="Clear Form">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#loadEmployeeData" prefHeight="25.0" prefWidth="146.0" text="Load Data">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                        </VBox>
+                        <Label fx:id="doneM" contentDisplay="CENTER" layoutX="7.0" layoutY="401.0" prefHeight="28.0" prefWidth="189.0" text="...................." textAlignment="CENTER" textFill="WHITE" visible="false" />
+                        <Button layoutX="40.0" layoutY="463.0" mnemonicParsing="false" onAction="#BackToAdministrationForm" prefHeight="31.0" prefWidth="138.0" text="BackToAdminForm">
+                           <font>
+                              <Font name="Segoe UI Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" layoutX="5.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resources/icons8_Back_To.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

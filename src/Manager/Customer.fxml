@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.AdminController">
+   <children>
+      <TabPane prefHeight="461.0" prefWidth="791.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Customer">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="791.0">
+                     <children>
+                        <HBox layoutX="208.0" prefHeight="433.0" prefWidth="582.0">
+                           <children>
+                              <TableView fx:id="customertable" onMouseClicked="#loaddatatofields" prefHeight="433.0" prefWidth="595.0" style="-fx-background-color: #2D3447;">
+                                 <columns>
+                                    <TableColumn fx:id="CusIDcolumn" prefWidth="86.0" text="ID" />
+                                    <TableColumn fx:id="CusNamecolumn" prefWidth="112.0" text="CustomerName" />
+                                    <TableColumn fx:id="CusNumbercolumn" prefWidth="119.0" text="CustomerNumber" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="-1.0" layoutY="-5.0" prefHeight="434.0" prefWidth="206.0" style="-fx-background-color: #2D3447;">
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="207.0" text=" Add Customer" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CusID" disable="true" editable="false" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="CusName" promptText="CustomerName">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="CusNumber" promptText="CustomerNumber">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#addCustomer" prefHeight="25.0" prefWidth="146.0" text="Add Customer">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#UpdateCustomer" prefHeight="25.0" prefWidth="146.0" text="Update Customer">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#DeleteCustomer" prefHeight="25.0" prefWidth="146.0" text="Delete Customer">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#clearFields" prefHeight="25.0" prefWidth="146.0" text="Clear Form">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#loadCustomerData" prefHeight="25.0" prefWidth="146.0" text="Load Data">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                        </VBox>
+                        <Label fx:id="doneM" contentDisplay="CENTER" layoutX="7.0" layoutY="401.0" prefHeight="28.0" prefWidth="189.0" text="...................." textAlignment="CENTER" textFill="WHITE" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Admin Section">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

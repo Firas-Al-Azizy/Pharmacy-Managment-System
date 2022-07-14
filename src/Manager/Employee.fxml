@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerForm.AdminController">
+   <children>
+      <TabPane prefHeight="527.0" prefWidth="855.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Employee">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="547.0" prefWidth="844.0">
+                     <children>
+                        <HBox layoutX="208.0" prefHeight="495.0" prefWidth="690.0">
+                           <children>
+                              <TableView fx:id="customertable" onMouseClicked="#loaddatatofields" prefHeight="495.0" prefWidth="647.0" style="-fx-background-color: #2D3447;">
+                                 <columns>
+                                    <TableColumn fx:id="CusIDcolumn" prefWidth="55.0" text="ID" />
+                                    <TableColumn fx:id="CusNamecolumn" prefWidth="88.0" text="EmpName" />
+                                    <TableColumn fx:id="CusNumbercolumn" prefWidth="85.0" text="EmpPassword" />
+                                    <TableColumn fx:id="CusNumbercolumn1" prefWidth="69.0" text="EmpDOB" />
+                                    <TableColumn fx:id="CusNumbercolumn11" prefWidth="68.0" text="EmpSalary" />
+                                    <TableColumn fx:id="CusNumbercolumn12" prefWidth="88.0" text="EmpPhoneNo" />
+                                    <TableColumn fx:id="CusNumbercolumn121" prefWidth="50.0" text="EmpSex" />
+                                    <TableColumn fx:id="CusNumbercolumn1211" prefWidth="75.0" text="EmpPosition" />
+                                    <TableColumn fx:id="CusNumbercolumn12111" prefWidth="68.0" text="CreatedAt" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="-1.0" layoutY="-4.0" prefHeight="503.0" prefWidth="206.0" style="-fx-background-color: #2D3447;">
+                           <children>
+                              <Label contentDisplay="BOTTOM" nodeOrientation="RIGHT_TO_LEFT" prefHeight="33.0" prefWidth="169.0" text=" Employee Main Form" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CusID" disable="true" editable="false" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="CusName" promptText="EmployeeName">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="CusNumber" promptText="EmployeePassword">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <DatePicker fx:id="StDOB" prefHeight="25.0" prefWidth="192.0" promptText="EmployeeDOB">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+                              <TextField fx:id="CusName1" promptText="EmployeeSalary">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="CusNumber1" promptText="EmployeePhoneNo">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="CusName11" promptText="EmployeeSex">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="CusNumber11" promptText="EmployeePosition">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <DatePicker fx:id="StDOB1" prefHeight="25.0" prefWidth="192.0" promptText="CreatedAt">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+                              <Button mnemonicParsing="false" onAction="#addCustomer" prefHeight="25.0" prefWidth="146.0" text="Add Employee">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#UpdateCustomer" prefHeight="25.0" prefWidth="146.0" text="Update Employee">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#DeleteCustomer" prefHeight="25.0" prefWidth="146.0" text="Delete Employee">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#clearFields" prefHeight="25.0" prefWidth="146.0" text="Clear Form">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#loadCustomerData" prefHeight="25.0" prefWidth="146.0" text="Load Data">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                        </VBox>
+                        <Label fx:id="doneM" contentDisplay="CENTER" layoutX="7.0" layoutY="401.0" prefHeight="28.0" prefWidth="189.0" text="...................." textAlignment="CENTER" textFill="WHITE" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Admin Section">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
